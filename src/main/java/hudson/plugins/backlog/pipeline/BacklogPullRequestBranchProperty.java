@@ -17,7 +17,6 @@ import jenkins.branch.MultiBranchProject;
 import org.eclipse.jgit.transport.URIish;
 import org.kohsuke.stapler.DataBoundConstructor;
 
-import javax.annotation.Nonnull;
 import java.io.IOException;
 import java.net.URL;
 import java.util.logging.Level;
@@ -72,7 +71,7 @@ public class BacklogPullRequestBranchProperty extends BranchProperty {
 
     @Extension
     public static class DescriptorImpl extends BranchPropertyDescriptor {
-        @Nonnull
+        @NonNull
         @Override
         public String getDisplayName() {
             return Messages.BacklogPullRequestBranchProperty_DisplayName();

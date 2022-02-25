@@ -1,5 +1,6 @@
 package hudson.plugins.backlog;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.model.Action;
 import hudson.model.JobProperty;
@@ -19,7 +20,6 @@ import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
 import org.kohsuke.stapler.StaplerRequest;
 
-import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collection;
@@ -160,9 +160,9 @@ public final class BacklogProjectProperty extends
 			return WorkflowJob.class;
 		}
 
-		@Nonnull
+		@NonNull
 		@Override
-		public Collection<? extends Action> createFor(@Nonnull WorkflowJob target) {
+		public Collection<? extends Action> createFor(@NonNull WorkflowJob target) {
 			if (target.getParent() instanceof MultiBranchProject) {
 				// Instead, add BacklogPullRequestLinkAction in BacklogPullRequestBranchProperty
 				return Collections.emptySet();

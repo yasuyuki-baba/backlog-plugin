@@ -1,5 +1,11 @@
-/.settings
-/.project
-/target
-/.classpath
-/work
+bin/
+build/
+work/
+.gradle
+.classpath
+.project
+.settings/
+classes/
+target
+.idea
+*.iml
